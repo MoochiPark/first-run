@@ -11,7 +11,11 @@
 
 ~~3. datastructure~~
 
-
+```
+if money:
+    print("Taxi")
+else:
+    print("work")
 
 
 ## *Made by*
