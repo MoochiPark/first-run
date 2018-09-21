@@ -11,7 +11,7 @@
 
 ~~3. datastructure~~
 
-~~~
+~~~python
 if money:
     print("Taxi")
 else:
