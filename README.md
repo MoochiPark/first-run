@@ -11,12 +11,12 @@
 
 ~~3. datastructure~~
 
-```
+~~~
 if money:
     print("Taxi")
 else:
     print("work")
-
+~~~
 
 ## *Made by*
  - *Daewon Park* *[<skywbrj@naver.com>]*
