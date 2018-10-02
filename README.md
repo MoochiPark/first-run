@@ -11,9 +11,10 @@
 ## *Index*
  **1. [python](https://github.com/MoochiPark/first-run/tree/master/JTP)** (Jump to Python)
 
-~~2. java~~
+ **2. [DataStructure](https://github.com/MoochiPark/first-run/tree/master/DataStructure)**
 
-~~3. datastructure~~
+~~3. java~~
+
 
 <br>
 
