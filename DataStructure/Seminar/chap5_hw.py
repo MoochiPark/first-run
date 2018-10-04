@@ -7,33 +7,32 @@ class Node:
 
 class LinkedList:
     def __init__(self):
-        HeadNode = Node("HEAD", "HEAD")
-        self.head = HeadNode
-        self.tail = HeadNode
-        self.NumOfData = 0
+        headNode = Node(None, None)
+        self.head = headNode
+        self.tail = headNode
+        self.count = 0
 
     def insert(self, coef, degree):
         insertNode = Node(coef, degree)
         self.tail.next = insertNode
         self.tail = insertNode
-        self.NumOfData += 1
+        self.count += 1
 
     def printList(self):
         current = self.head
-        if self.NumOfData == 0:
-            print("List is empty!")
+        if self.count == 0:
+            print("수식을 입력한 후 시도하세요.")
             return None
-        print("HEAD::", end='')
-        for i in range(self.NumOfData - 1):
-            print(current.next.coef, "->", end='')
+        print("result = ", end='')
+        for i in range(self.count - 1):
+            print("{}x^{} + ".format(current.next.coef, current.next.degree), end='')
             current = current.next
         print(current.next.coef)
 
 
-def polyAdd(pA, pB, pR):
+def polyAdd(pA, pB):
     f1 = pA.head
     f2 = pB.head
-    ret = pR.head
     while f1.next and f2.next:
 
         if f1.next.degree == f2.next.degree:
@@ -48,6 +47,15 @@ def polyAdd(pA, pB, pR):
             pReturn.insert(f2.next.coef, f2.next.degree)
             f2 = f2.next
 
+    while f1.next or f2.next:
+        if f1.next:
+            pReturn.insert(f1.next.coef, f1.next.degree)
+            f1 = f1.next
+        if f2.next:
+            pReturn.insert(f2.next.coef, f2.next.degree)
+            f2 = f2.next
+
+
 pListA = LinkedList()
 pListB = LinkedList()
 pReturn = LinkedList()
@@ -61,7 +69,6 @@ pListB.insert(2, 4)
 pListB.insert(3, 2)
 pListB.insert(4, 0)
 
-polyAdd(pListA, pListB, pReturn)
+polyAdd(pListA, pListB)
 
 pReturn.printList()
-
