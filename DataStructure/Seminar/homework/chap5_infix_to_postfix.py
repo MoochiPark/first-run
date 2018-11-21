@@ -9,22 +9,20 @@ for token in expression:
         continue
     elif token == ")":
         while stack:
-            p1 = stack.pop()
-            if p1 == '(':
+            top = stack.pop()
+            if top == '(':
                 break
             else:
-                print(p1, end=" ")
+                print(top, end=" ")
     elif not token.isdigit():
         for n in range(len(stack)):
             tmp = stack[-1]
             if outPriority[token] <= inPriority[tmp]:
                 print(tmp, end=" ")
-                del stack[n]
+                stack.pop()
             else:
                 break
-
         stack.append(token)
 
 while stack:
-    p3 = stack.pop()
-    print(p3, end=" ")
+    print(stack.pop(), end=" ")
