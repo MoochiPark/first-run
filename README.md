@@ -13,7 +13,7 @@
 
  **2. [DataStructure](https://github.com/MoochiPark/first-run/tree/master/DataStructure)**
 
-~~3. java~~
+**3. [java](https://github.com/MoochiPark/first-run/tree/master/DataStructure)** (이것이 자바다)
 
 
 <br>
