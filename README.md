@@ -19,4 +19,4 @@
 <br>
 
 ## *Made by*
- - *Daewon Park* *[<skywbrj@naver.com>]*
+ - *Daewon Park* *[<daewon@wisoft.io>]*
